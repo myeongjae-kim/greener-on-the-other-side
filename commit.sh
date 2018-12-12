@@ -11,7 +11,7 @@ set timeout 10
 spawn git push
 expect "Username for 'https://github.com':"
 	send "$USER\r"
-expect "Password for 'https://hrzon@github.com':"
+expect "Password for 'https://($USER)@github.com':"
 	send "$PW\r"
 expect eof
 EOF
