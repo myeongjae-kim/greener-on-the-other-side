@@ -4,6 +4,8 @@ echo "$(date)" >> log
 git add -A
 git commit -m "Daily commit"
 
+echo "$PW"
+
 expect <<EOF
 set timeout 3
 spawn git push
