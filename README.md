@@ -8,7 +8,7 @@ Install `expect`
 sudo yum -y install expect
 ```
 
-Generate a script to run `commit.sh`.
+Generate `run.sh` to run `commit.sh`. The `.gitignore` has `run.sh`, so `run.sh` will not be added to your repository.
 
 ```sh
 #!/bin/sh
