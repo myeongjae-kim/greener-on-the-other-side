@@ -1,6 +1,11 @@
 #!/bin/sh
 # $USER and $PW must be declared out of this script
 echo "$(date)" >> log
+
+
+echo "$__GIT_USER__"
+echo "$__GIT_PW__"
+
 git add -A
 git commit -m "Daily commit"
 
