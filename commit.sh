@@ -7,7 +7,7 @@ git add -A
 git commit -m "Daily commit"
 
 expect <<EOF
-set timeout 3
+set timeout 1
 spawn git push
 expect "Username for 'https://github.com':"
 	send "$USER\r"
