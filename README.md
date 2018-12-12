@@ -1,5 +1,5 @@
 # greener-on-the-other-side
-Repository for a commit for every single day
+Repository to push a commit automatically for every single day
 
 ## Instruction
 
@@ -18,7 +18,7 @@ cd /home/your-account/greener-on-the-other-side
 
 Then `commit.sh` will push a commit for your repository.
 
-Register `run.sh` to the crontab
+Register `run.sh` to the `crontab`.
 
 ```
 00 17 * * * /home/your-account/greener-on-the-other-side/run.sh
