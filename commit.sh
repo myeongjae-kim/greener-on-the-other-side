@@ -1,10 +1,7 @@
 #!/bin/sh
-# $USER and $PW must be declared out of this script
 echo "$(date)" >> log
-
-
-echo "$__GIT_USER__"
-echo "$__GIT_PW__"
+USER=$1
+PW=$2
 
 git add -A
 git commit -m "Daily commit"
@@ -13,8 +10,8 @@ expect <<EOF
 set timeout 3
 spawn git push
 expect "Username for 'https://github.com':"
-	send "$__GIT_USER__\r"
+	send "$USER\r"
 expect "Password for 'https://hrzon@github.com':"
-	send "$__GIT_PW__\r"
+	send "$PW\r"
 expect eof
 EOF
