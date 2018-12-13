@@ -21,10 +21,10 @@ Then `commit.sh` will push a commit for your repository.
 Register `run.sh` to the `crontab`.
 
 ```
-00 17 * * * /home/your-account/greener-on-the-other-side/run.sh
+00 08 * * * /home/your-account/greener-on-the-other-side/run.sh
 ```
 
-It will push a commit to your repository every single day at 5PM.
+It will push a commit to your repository every single day at 8AM of UCT (5PM of KST).
 
 ## References
 
