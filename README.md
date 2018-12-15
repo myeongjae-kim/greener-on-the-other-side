@@ -13,10 +13,10 @@ Generate `run.sh` to run `commit.sh`. The `.gitignore` has `run.sh`, so `run.sh`
 ```sh
 #!/bin/sh
 cd /home/your-account/greener-on-the-other-side
-./commit.sh github-id github-password
+./commit.sh github-id github-password line-notify-token
 ```
 
-Then `commit.sh` will push a commit for your repository.
+Then `commit.sh` will push a commit for your repository. To get `line-notify-token`, see [LINE-Notify bot](https://notify-bot.line.me/en/).
 
 Register `run.sh` to the `crontab`.
 
