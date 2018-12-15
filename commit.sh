@@ -15,3 +15,5 @@ expect "Password for 'https://($USER)@github.com':"
 	send "$PW\r"
 expect eof
 EOF
+
+curl -X POST -H "Authorization: Bearer $3" -F "message=Pushed 1 commit. Return: $?" https://notify-api.line.me/api/notify
