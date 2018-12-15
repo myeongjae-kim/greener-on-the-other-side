@@ -1,5 +1,5 @@
 # greener-on-the-other-side
-Repository to push a commit automatically for every single day
+Repository to automatically push a commit for every single day.
 
 ## Instruction
 
