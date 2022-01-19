@@ -8,7 +8,7 @@ git commit -m "Daily commit"
 
 expect <<EOF
 set timeout 10
-spawn git push --force
+spawn git push
 expect "Username for 'https://github.com':"
 	send "$USER\r"
 expect "Password for 'https://($USER)@github.com':"
@@ -16,4 +16,8 @@ expect "Password for 'https://($USER)@github.com':"
 expect eof
 EOF
 
-curl -X POST -H "Authorization: Bearer $3" -F "message=Pushed 1 commit. Return: $?" https://notify-api.line.me/api/notify
+text="message=[Greener] Pushed 1 commit. Return: $?"
+curl $SLACK_WEBHOOK \
+  -X 'POST' \
+  -H 'Content-Type: application/json' \
+  -d "{\"text\": \"$text\"}"
