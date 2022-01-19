@@ -16,7 +16,7 @@ expect "Password for 'https://($USER)@github.com':"
 expect eof
 EOF
 
-text="message=[Greener] Pushed 1 commit. Return: $?"
+text="[Greener] Pushed 1 commit. Return: $?"
 curl $SLACK_WEBHOOK \
   -X 'POST' \
   -H 'Content-Type: application/json' \
