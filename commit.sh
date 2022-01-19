@@ -16,7 +16,10 @@ expect "Password for 'https://($USER)@github.com':"
 expect eof
 EOF
 
-text="[Greener] Pushed 1 commit. Return: $?"
+mj_hostname=$(hostname)
+mj_whoami=$(whoami)
+
+text="[Greener] Pushed 1 commit from $mj_whoami@$mj_hostname , Return: $?"
 curl $SLACK_WEBHOOK \
   -X 'POST' \
   -H 'Content-Type: application/json' \
