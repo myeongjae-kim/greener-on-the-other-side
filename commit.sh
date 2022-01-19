@@ -8,7 +8,7 @@ git commit -m "Daily commit"
 
 expect <<EOF
 set timeout 10
-spawn git push
+spawn git push --force
 expect "Username for 'https://github.com':"
 	send "$USER\r"
 expect "Password for 'https://($USER)@github.com':"
